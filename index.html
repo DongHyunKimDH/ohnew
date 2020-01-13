@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title> 오뉴이노베이션 </title>
+    <link rel="stylesheet" href="assets/css/swiper.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="apple-touch-icon" href="assets/images/favicon.png"> <!-- 모바일 아이폰 전용 바로가기 아이콘 -->
+    <link rel="shortcut icon" href="assets/images/favicon.png"> <!-- 모바일 안드로이드 전용 바로가기 아이콘 -->
+    <script src="assets/js/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!--
+        <link rel="apple-touch-icon-precomposed" href=""> // 아이폰, 안드로이드 모두 사용가능한 바로가기 아이콘 
+    -->
+</head>
+<body>
+    <!-- 
+        viewport : 실제 웹 사이트를 표시하는 화면 영역 // 모바일, 반응형웹에서 viewport 필수
+        <meta name="viewport" content="width=device-width, initial-scale=1.0> 까지는 필수 사항
+         maximum-scale=1.0, minimum-scale=1.0, user-scalable=no 선택사항
+         
+         initial-scale : 초기 비율
+         maximum-scale : 확대 비율
+         minimum-scale : 축소 비율
+         user-scalable : 사용자에게 확대 축소 기능 부여할지 여부
+     -->
+    <div id="wrap"> <!-- overflow : hidden 으로 오른쪽에 위치하는 네비게이션 제어 -->
+        <header id="header">
+            <h1 class="logo">
+                <a href="">
+                    <!-- img absolute로 포개고 colorLogo opacity 0상태에서 스크롤 이벤트로 header가 .bgchange를 가지면 opacity 1 
+                    srcset="" // 2배, 3배... 밀도를 가진 모바일 기기에서 자신의 밀도에 맞는 이미지를 다운로드할 수 있도록 처리
+                    srcset="경로명1 조건1, 경로명2 조건2"
+                    -->
+                    <img class="white-Logo" src="assets/images/common/logo.png" alt="오뉴이노베이션" srcset="assets/images/common/logox2.png 2x, assets/images/common/logox3.png 3x">
+                    <img class="color-Logo" src="assets/images/common/logo_color.png" srcset="assets/images/common/logo_colorx2.png 2x, assets/images/common/logo_colorx3.png 3x" alt="">
+                </a>
+            </h1>
+            <button class="btn-menu" type="button">
+                <span class="sr-only">메뉴열기</span>
+                <span class="line top"></span>
+                <span class="line mid"></span>
+                <span class="line btm"></span>
+            </button>
+            <nav id="gnb">
+                <h2 class="sr-only">주메뉴</h2>
+                <ul>
+                    <li>
+                        <a data-link="first" href="">About Us</a>
+                        <ul>
+                            <li><a href="aboutus/overview.html">Overview</a></li>
+                            <li><a href="">History</a></li>
+                            <li><a href="">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">Solutions</a>
+                        <ul>
+                            <li><a href="">CLOUD</a></li>
+                            <li><a href="">Infra Software</a></li>
+                            <li><a href="">Network</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">Service</a>
+                        <ul>
+                            <li><a href="">Consulting Service</a></li>
+                            <li><a href="">Time Hiring Consulting</a></li>
+                            <li><a href="">Carepack</a></li>
+                        </ul>
+                    </li>
+                    <li class="cntempty">
+                        <a href="">Case Study</a>
+                    </li>
+                    <li>
+                        <a href="">Support</a>
+                        <ul>
+                            <li><a href="">Notice</a></li>
+                            <li><a href="">Resource</a></li>
+                            <li><a href="">Download</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">Recruit</a>
+                        <ul>
+                            <li><a href="">Talent</a></li>
+                            <li><a href="">Careers</a></li>
+                        </ul>
+                    </li>
+                    <li class="cntempty">
+                        <a data-link="last" href="">Inquiry</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+       
+        <section id="content">
+            <h2 class="sr-only">메인 본문</h2>
+
+            <article class="top-visual main-topvisual"> <!-- display :flex  / 가상엘리먼트 높이 인식을 위해 relative-->
+                <div class="txtbox">
+                    <h3 class="sr-only">문의하기</h3>
+                    <strong>오픈소스는 사회 곳곳에서 필요로 하고 있습니다.</strong>
+                    <p>㈜오뉴이노베이션은 고객사의 성공적인 오픈소스 플랫폼 기반의 차별화된 서비스를 제공하여 고객사와의 동반성장을 약속 드립니다.</p>
+                    <a href="">INQUIRY</a>
+                </div>
+            </article>
+
+            <article class="main-banner">
+                <h3 class="sr-only">오뉴이노베이션 사업분야</h3>
+                <ul>
+                    <li> <!-- 배경이미지  -->
+                        <!-- ::before 가상요소로 마스크 -->
+                        <p>CLOUD</p>
+                    </li>
+                    <li>
+                        <p>INFRA SW</p>
+                    </li>
+                    <li>
+                        <p>NETWORK</p>
+                    </li>
+                </ul>
+            </article>
+
+            <article class="consulting margintop80 fade direction-up">
+                <h3 class="orange">Consulting Service</h3>
+                <!-- swiper : touch mobile slider -->
+                <div class="swiper-container">
+                    <!-- 슬라이더 상세내용 그룹 -->
+                    <div class="swiper-wrapper">
+                        <!-- 상세내용 -->
+                        <div class="swiper-slide">
+                            <strong>Cloud Computing</strong>
+                            <figure>
+                                <img src="assets/images/main/img_cloud01.jpg" alt="">
+                            </figure>
+                            <a class="detail" href="">View more</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <strong>오픈소스컨설팅</strong>
+                            <figure>
+                                <img src="assets/images/main/img_cloud02.jpg" alt="">
+                            </figure>
+                            <a class="detail" href="">View more</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <strong>IT Integration</strong>
+                            <figure>
+                                <img src="assets/images/main/img_cloud03.jpg" alt="">
+                            </figure>
+                            <a class="detail" href="">View more</a>
+                        </div>
+                    </div>
+                    <!-- 페이징 번호 -->
+                    <div class="swiper-pagination"></div>     
+                    <!-- 이전 다음 버튼 -->
+                    <div class="swiper-button-prev"><img src="assets/images/main/s_arr_prev.png" alt=""></div>
+                    <div class="swiper-button-next"><img src="assets/images/main/s_arr_next.png" alt=""></div>
+                </div>
+            </article>
+
+            <article class="casestudy margintop80 padding-horizontal ">
+                <div class="fade direction-up">
+                    <h3 class="main-tit">Case Study</h3>
+                    <p>공공기관, 금융, 통신 등 오픈소스는 다양한 분야에서 필요로 하고 있습니다.</p>
+                </div>
+                <div class="fade direction-down po_relat">
+                    <div class="swiper-container">
+                        <!-- 슬라이더 상세내용 그룹 -->
+                        <div class="swiper-wrapper">
+                            <!-- 상세내용 -->
+                            <div class="swiper-slide">
+                                <figure>
+                                    <img src="assets/images/main/case1.jpg" alt="">
+                                </figure>
+                                <strong>공공기관</strong>
+                                <p>오픈소스 기반의 엔터프라이즈 표준화 운영체제 서비스를 제공하여, 서비스 오픈 기간 단축 및 물리서버에서 가상서버로 환경을 수행</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure>
+                                    <img src="assets/images/main/case2.jpg" alt="">
+                                </figure>
+                                <strong>금융통신</strong>
+                                <p>오픈소스 기반의 엔터프라이즈 표준화 운영체제 서비스를 제공하여, 서비스 오픈 기간 단축 및 물리서버에서 가상서버로 환경을 수행</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure>
+                                    <img src="assets/images/main/case3.jpg" alt="">
+                                </figure>
+                                <strong>이커머스</strong>
+                                <p>오픈소스 기반의 엔터프라이즈 표준화 운영체제 서비스를 제공하여, 서비스 오픈 기간 단축 및 물리서버에서 가상서버로 환경을 수행</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure>
+                                    <img src="assets/images/main/case4.jpg" alt="">
+                                </figure>
+                                <strong>일반기업</strong>
+                                <p>오픈소스 기반의 엔터프라이즈 표준화 운영체제 서비스를 제공하여, 서비스 오픈 기간 단축 및 물리서버에서 가상서버로 환경을 수행</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure>
+                                    <img src="assets/images/main/case5.jpg" alt="">
+                                </figure>
+                                <strong>게임포털</strong>
+                                <p>오픈소스 기반의 엔터프라이즈 표준화 운영체제 서비스를 제공하여, 서비스 오픈 기간 단축 및 물리서버에서 가상서버로 환경을 수행</p>
+                            </div>
+                        </div>
+                        <!-- 스크롤바 -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                    <a class="detail" href="">View more</a>
+                </div>
+            </article>
+
+            <article class="support margintop80 padding-horizontal">
+                <img src="assets/images/banner/supportbanner.jpg" alt="">
+                <div class="fade direction-up">
+                    <h3 class="main-tit margintop80">SUPPORT</h3>
+                    <p>'변화를 선도하는 기업', '인간 중심의 기업' '그리고 믿음을 주는 기업'</p>
+                </div>
+                <ul class="support-list ">
+                    <li class="fade direction-down">
+                        <a href="">
+                            <span>NOTICE</span>
+                        </a>
+                    </li>
+                    <li class="fade direction-down">
+                        <a href="">
+                            <span>DOWNLOAD</span>
+                        </a>
+                    </li>
+                    <li class="fade direction-down">
+                        <a href="">
+                            <span>CAREERS</span>
+                        </a>
+                    </li>
+                    <li class="fade direction-down">
+                        <a href="">
+                            <span>INQUIRY</span>
+                        </a>
+                    </li>
+                </ul>
+            </article>
+
+        </section>
+
+        <footer id="footer">
+            <a href=""><img src="assets/images/common/f_logo.png" alt=""></a>
+            <address>08389. 서울특별시 구로구 디지털로 26길 61, 1604호 (구로동, 에이스하이엔드타워2차)<br>TEL. 02-866-2179 FAX. 02-866-2189.</address>
+            <p>COPYRIGHTS&copy;2019 Ohnew Innovation ALL RIGHTS RESERVED</p>
+        </footer>
+    </div>
+</body>
+</html>
